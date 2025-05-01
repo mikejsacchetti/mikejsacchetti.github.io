@@ -45,43 +45,40 @@
     .header-img {
       max-width: 800px;
       width: 100%;
-      margin: 0 auto 40px;
+      margin: 0 auto 30px;
     }
 
     .bio {
       font-size: 1.2em;
       font-style: italic;
       max-width: 760px;
-      margin: 40px auto 40px;
+      margin: 20px auto 30px;
     }
 
     .embed-container {
-      margin-top: 50px;
-      margin-bottom: 30px;
+      margin: 20px auto;
       max-width: 900px;
       width: 100%;
-      margin-left: auto;
-      margin-right: auto;
+      padding: 0; /* Ensure no extra padding */
     }
 
     iframe {
       border-radius: 12px;
-      margin: 28px 0;
+      margin: 5px 0;
       width: 100%;
       height: 380px;
+      display: block;
     }
 
     .image-after-embed {
-      margin-top: 40px;
+      margin: 15px auto;
       max-width: 1080px;
       width: 100%;
-      margin: 0 auto;
     }
 
     .licensing {
       font-size: 1.2em;
-      margin-top: 0px;
-      margin-bottom: 0px;
+      margin: 15px 0;
     }
 
     .copyright {
@@ -97,7 +94,22 @@
       .subtitle { font-size: 1.4em; }
       .bio { font-size: 1.1em; padding: 0 20px; }
       .links a { padding: 12px 24px; }
-      iframe { height: 320px; }
+      .embed-container { margin: 15px auto; padding: 0; }
+      iframe {
+        height: 320px;
+        margin: 0; /* No margins to eliminate gap */
+        /* If a tiny gap persists, uncomment below for fine-tuning */
+        /* margin-bottom: -2px; */
+      }
+      iframe[src*="spotify"] {
+        padding: 0; /* Override Spotify internal padding */
+        border: none; /* Remove any borders */
+      }
+      iframe[src*="youtube"] {
+        height: 320px; /* Match Spotify height for consistency */
+      }
+      .image-after-embed { margin: 10px auto; }
+      .licensing { margin: 10px 0; }
     }
   </style>
 </head>
@@ -117,24 +129,23 @@
   </div>
 
   <p class="bio">
-    12 years of marketing experience with a track record of developing successful campaigns for top music artists and brands globally.Gained national attention and notable accomplishments as an independent musician and producer with millions of streams globally.
+    12 years of marketing experience with a track record of developing successful campaigns for top music artists and brands globally. Gained national attention and notable accomplishments as an independent musician and producer with millions of streams globally.
   </p>
 
   <div class="embed-container">
     <iframe src="https://open.spotify.com/embed/playlist/1CrbpCGcOgzWV2IMTxAOOI?utm_source=generator" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=lbz6IESKImJhtmXN&amp;controls=0&amp;list=PLYaatkA5M00xekQtPmxUr_XqbsCt-MCCI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=lbz6IESKImJhtmXN&controls=0&list=PLYaatkA5M00xekQtPmxUr_XqbsCt-MCCI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
 
     <img src="https://i.imgur.com/tPGIkll.jpeg" alt="Mike Sacchetti Artist Image" class="image-after-embed" loading="lazy" />
-
-    <br><br><br>
 
     <p class="licensing">
       For licensing inquiries, please contact:<br>
       <a href="mailto:yo@lowprofilenyc.com">yo@lowprofilenyc.com</a>
     </p>
   </div>
-  <p class="copyright">&copy; 2025. All rights reserved.</p>
+
+  <p class="copyright">© 2025. All rights reserved.</p>
 
 </body>
 </html>

@@ -135,7 +135,7 @@
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=lbz6IESKImJhtmXN&controls=0&list=PLYaatkA5M00xekQtPmxUr_XqbsCt-MCCI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
 
-    <img src="https://i.imgur.com/tPGIkll.jpeg" alt="Mike Sacchetti Artist Image" class="image-after-embed" loading="lazy" />
+    <br>
 
     <p class="licensing">
       For licensing inquiries, please contact:<br>
@@ -143,7 +143,11 @@
     </p>
   </div>
 
-  <p class="copyright">© 2025. All rights reserved.</p>
+  <p class="copyright">© <span id="year"></span>. All rights reserved.</p>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
